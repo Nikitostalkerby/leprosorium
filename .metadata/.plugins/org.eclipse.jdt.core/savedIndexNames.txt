@@ -8,6 +8,7 @@ INDEX VERSION 1.127+/home/vaas/Документы/leprosorium/.metadata/.plugins
 3876842351.index
 3274199738.index
 3532252490.index
+1865787798.index
 1472755483.index
 3518383862.index
 203795959.index
