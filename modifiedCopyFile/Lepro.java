@@ -11,11 +11,6 @@ class Lepro {
 		
 		int i;
 		
-		/*if(args.length != 2) {
-			System.out.println("English mothertrucker, do you speak it?");
-			return;
-		}*/
-		
 		try (FileInputStream fin = new 
 				FileInputStream("/home/abigor/workspace/leprosorium/src/modifiedCopyFile/input");
 				

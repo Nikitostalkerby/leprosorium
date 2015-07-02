@@ -13,11 +13,6 @@ class Lepro {
 		FileInputStream fin;
 		FileOutputStream fout;
 		
-		/*if(args.length != 2) {
-			System.out.println("What the duck is this sheet?!");
-			return;
-		}*/
-		
 		try {
 			fin = new FileInputStream("/home/abigor/workspace/leprosorium/src/copyFile/input");
 		} catch(FileNotFoundException e) {
