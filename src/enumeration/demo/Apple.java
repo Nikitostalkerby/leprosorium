@@ -1,5 +1,5 @@
-package enumDemo;
+package enumeration.demo;
 
-public enum Apple {
+enum Apple {
 	Jonathan, GoldenDel, RedDel, Winesap, Cortland
 }

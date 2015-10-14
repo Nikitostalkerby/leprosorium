@@ -1,6 +1,6 @@
-package enumDemo;
+package enumeration.demo;
 
-public class Lepro {
+class Lepro {
 
 	public static void main(String[] args) {
 		Apple apple;

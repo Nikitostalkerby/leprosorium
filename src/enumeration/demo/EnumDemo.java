@@ -1,6 +1,6 @@
-package enumDemo;
+package enumeration.demo;
 
-public class EnumDemo {
+class EnumDemo {
 
 	public static void main(String[] args) {
 		Apple ap;
