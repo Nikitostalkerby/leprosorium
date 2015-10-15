@@ -1,4 +1,4 @@
-package file.showFile;
+package file.FileInputStream;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,7 +12,6 @@ class Lepro {
 		FileInputStream fin;
 
 		try {
-			// open the file
 			fin = new FileInputStream(".//src/file/showFile/input.txt");
 		} catch (FileNotFoundException exc) {
 			System.out.println("File not found");
@@ -21,11 +20,10 @@ class Lepro {
 
 		try {
 			do {
-				// reading the file
 				i = fin.read();
-				if (i != -1)
+				if (i != -1) {
 					System.out.print((char) i);
-				// if (i = -1) end of file
+				}
 			} while (i != -1);
 		} catch (IOException exc) {
 			System.out.println("Error reading file.");
