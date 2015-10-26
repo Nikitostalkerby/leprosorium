@@ -17,7 +17,7 @@ class Lepro {
 			do {
 				System.out.print(": ");
 				str = br.readLine();
-				if (str.compareTo("stop") == 0)
+				if (str.equals("stop"))
 					break;
 				str = str + "\r\n";
 				fw.write(str);

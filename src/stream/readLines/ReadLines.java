@@ -17,7 +17,7 @@ class ReadLines {
 		do {
 			str = br.readLine();
 			System.out.println(str);
-			if (str.equals("kurwa"))
+			if (!str.equals(null) && str.equals("kurwa"))
 				System.out.println("pwe pwe pwe\n");
 		} while (!str.equals("kurwa"));
 	}
