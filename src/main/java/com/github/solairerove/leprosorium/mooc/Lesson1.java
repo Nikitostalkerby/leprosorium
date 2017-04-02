@@ -19,21 +19,15 @@ import java.util.TreeMap;
  *         lambda expressions wherever possible.
  */
 public class Lesson1 {
+
     /**
-     * Run the exercises to ensure we got the right answers
+     * Main entry point for application
+     *
+     * @param args the command line arguments
      */
-    private void runExercises() {
-        System.out.println("JDK 8 Lambdas and Streams MOOC Lesson 1");
-        System.out.println("Running exercise 1 solution...");
-        exercise1();
-        System.out.println("Running exercise 2 solution...");
-        exercise2();
-        System.out.println("Running exercise 3 solution...");
-        exercise3();
-        System.out.println("Running exercise 4 solution...");
-        exercise4();
-        System.out.println("Running exercise 5 solution...");
-        exercise5();
+    public static void main(String[] args) {
+        Lesson1 lesson = new Lesson1();
+        lesson.runExercises();
     }
 
     /**
@@ -102,16 +96,23 @@ public class Lesson1 {
     private void exercise5() {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-    /* YOUR CODE HERE */
+        new Thread(() -> list.forEach(System.out::print)).start();
     }
 
     /**
-     * Main entry point for application
-     *
-     * @param args the command line arguments
+     * Run the exercises to ensure we got the right answers
      */
-    public static void main(String[] args) {
-        Lesson1 lesson = new Lesson1();
-        lesson.runExercises();
+    private void runExercises() {
+        System.out.println("JDK 8 Lambdas and Streams MOOC Lesson 1");
+        System.out.println("Running exercise 1 solution...");
+        exercise1();
+        System.out.println("Running exercise 2 solution...");
+        exercise2();
+        System.out.println("Running exercise 3 solution...");
+        exercise3();
+        System.out.println("Running exercise 4 solution...");
+        exercise4();
+        System.out.println("Running exercise 5 solution...");
+        exercise5();
     }
 }
