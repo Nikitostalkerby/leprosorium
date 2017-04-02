@@ -46,6 +46,7 @@ public class Lesson1 {
         List<String> list = Arrays.asList("alpha", "bravo", "charlie", "delta", "echo", "foxtrot");
         StringBuilder builder = new StringBuilder();
         list.forEach(s -> builder.append(s.charAt(0)));
+
         System.out.println(builder);
     }
 
@@ -56,8 +57,10 @@ public class Lesson1 {
      */
     private void exercise2() {
         List<String> list = new ArrayList<>(Arrays.asList("alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
+        list.removeIf(s -> (s.length() % 2) != 0);
+//        list.removeIf(s -> (s.length() & 1) == 1);
 
-    /* YOUR CODE HERE */
+        list.forEach(System.out::println);
     }
 
     /**
