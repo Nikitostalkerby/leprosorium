@@ -87,7 +87,11 @@ public class Lesson1 {
         map.put("b", 2);
         map.put("a", 1);
 
-    /* YOUR CODE HERE */
+        StringBuilder builder = new StringBuilder();
+        map.forEach((k, v) -> builder.append(k).append(v));
+//        map.forEach((k, v) -> builder.append(String.format("%s%s", k, v)));
+
+        System.out.println(builder);
     }
 
     /**
