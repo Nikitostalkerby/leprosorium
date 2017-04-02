@@ -48,7 +48,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>base.iQueue.Lepro</mainClass>
+                            <mainClass>com.github.solairerove.leprosorium.old.base.iQueue.Lepro</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
