@@ -10,5 +10,11 @@ public class ReactiveExample {
         System.out.println("Hello");
 
         Flowable.just("Simple reactive").subscribe(System.out::println);
+
+        Flowable.fromArray(1, 2, 3, 4).subscribe(
+                i -> System.out.printf("Entry %d\n", i),
+                e -> System.out.printf("Failed to process: %s\n", e),
+                () -> System.out.println("Done")
+        );
     }
 }
