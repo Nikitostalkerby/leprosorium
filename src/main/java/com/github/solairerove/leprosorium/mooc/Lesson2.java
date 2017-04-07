@@ -12,6 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Speakjava (Simon Ritter)
@@ -80,6 +81,13 @@ public class Lesson2 {
     private void exercise3() {
         List<String> list = Arrays.asList(
                 "The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog");
+
+        String line = list.stream()
+                .skip(1)
+                .limit(3)
+                .collect(Collectors.joining("-"));
+
+        System.out.println(line);
 
     /* YOUR CODE HERE */
     }
