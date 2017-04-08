@@ -7,12 +7,14 @@ package com.github.solairerove.leprosorium.mooc;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static java.lang.System.out;
+import static java.nio.charset.StandardCharsets.UTF_8;
+import static java.nio.file.Files.newBufferedReader;
+import static java.nio.file.Paths.get;
+import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.joining;
 
 /**
  * @author Speakjava (Simon Ritter)
@@ -26,15 +28,15 @@ public class Lesson2 {
      * @throws IOException
      */
     public void runExercises() throws IOException {
-        System.out.println("JDK 8 Lambdas and Streams MOOC Lesson 2");
-        System.out.println("Running exercise 1 solution...");
+        out.println("JDK 8 Lambdas and Streams MOOC Lesson 2");
+        out.println("Running exercise 1 solution...");
         exercise1();
-        System.out.println("Running exercise 2 solution...");
+        out.println("Running exercise 2 solution...");
         exercise2();
-        System.out.println("Running exercise 3 solution...");
+        out.println("Running exercise 3 solution...");
         exercise3();
-//        System.out.println("Running exercise 4 solution...");
-//        exercise4();
+        out.println("Running exercise 4 solution...");
+        exercise4();
 //        System.out.println("Running exercise 5 solution...");
 //        exercise5();
 //        System.out.println("Running exercise 6 solution...");
@@ -50,11 +52,11 @@ public class Lesson2 {
      * lower case and print them out.
      */
     private void exercise1() {
-        List<String> list = Arrays.asList("The", "Quick", "BROWN", "Fox", "Jumped", "Over", "The", "LAZY", "DOG");
+        List<String> list = asList("The", "Quick", "BROWN", "Fox", "Jumped", "Over", "The", "LAZY", "DOG");
 
         list.stream()
                 .map(String::toLowerCase)
-                .forEach(System.out::println);
+                .forEach(out::println);
     }
 
     /**
@@ -64,12 +66,12 @@ public class Lesson2 {
      * odd length
      */
     private void exercise2() {
-        List<String> list = Arrays.asList("The", "Quick", "BROWN", "Fox", "Jumped", "Over", "The", "LAZY", "DOG");
+        List<String> list = asList("The", "Quick", "BROWN", "Fox", "Jumped", "Over", "The", "LAZY", "DOG");
 
         list.stream()
                 .filter(s -> (s.length() & 1) == 1)
                 .map(String::toLowerCase)
-                .forEach(System.out::println);
+                .forEach(out::println);
     }
 
     /**
@@ -79,15 +81,15 @@ public class Lesson2 {
      * where each word is separated by a hyphen (-). Print the resulting string.
      */
     private void exercise3() {
-        List<String> list = Arrays.asList(
+        List<String> list = asList(
                 "The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog");
 
         String line = list.stream()
                 .skip(1)
                 .limit(3)
-                .collect(Collectors.joining("-"));
+                .collect(joining("-"));
 
-        System.out.println(line);
+        out.println(line);
 
     /* YOUR CODE HERE */
     }
@@ -96,8 +98,7 @@ public class Lesson2 {
      * Count the number of lines in the file using the BufferedReader provided
      */
     private void exercise4() throws IOException {
-        try (BufferedReader reader = Files.newBufferedReader(
-                Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
+        try (BufferedReader reader = newBufferedReader(get("SonnetI.txt"), UTF_8)) {
       /* YOUR CODE HERE */
         }
     }
@@ -109,8 +110,7 @@ public class Lesson2 {
      * HINT: A regular expression, WORD_REGEXP, is already defined for your use.
      */
     private void exercise5() throws IOException {
-        try (BufferedReader reader = Files.newBufferedReader(
-                Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
+        try (BufferedReader reader = newBufferedReader(get("SonnetI.txt"), UTF_8)) {
       /* YOUR CODE HERE */
         }
     }
@@ -121,8 +121,7 @@ public class Lesson2 {
      * sorted by natural order.  Print the contents of the list.
      */
     private void exercise6() throws IOException {
-        try (BufferedReader reader = Files.newBufferedReader(
-                Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
+        try (BufferedReader reader = newBufferedReader(get("SonnetI.txt"), UTF_8)) {
       /* YOUR CODE HERE */
         }
     }
@@ -131,8 +130,7 @@ public class Lesson2 {
      * Modify exercise6 so that the words are sorted by length
      */
     private void exercise7() throws IOException {
-        try (BufferedReader reader = Files.newBufferedReader(
-                Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
+        try (BufferedReader reader = newBufferedReader(get("SonnetI.txt"), UTF_8)) {
       /* YOUR CODE HERE */
         }
     }
